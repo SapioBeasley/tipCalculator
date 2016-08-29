@@ -90,7 +90,23 @@
                             <outletCollection property="gestureRecognizers" destination="PCa-O8-t3G" appends="YES" id="pgs-yM-idq"/>
                         </connections>
                     </view>
-                    <navigationItem key="navigationItem" title="Tip Calculation" id="YCv-GY-Ax6"/>
+                    <toolbarItems>
+                        <barButtonItem style="plain" id="Tjb-QA-1Bl">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="NC2-NI-Pkm">
+                                <rect key="frame" x="16" y="7" width="83" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Settings"/>
+                            </button>
+                        </barButtonItem>
+                    </toolbarItems>
+                    <navigationItem key="navigationItem" title="Tip Calculation" id="YCv-GY-Ax6">
+                        <barButtonItem key="rightBarButtonItem" title="Settings" id="ah3-Jf-F5R">
+                            <connections>
+                                <segue destination="lkr-3V-o9K" kind="push" id="nQc-2R-62A"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="billInput" destination="ag3-e1-KMl" id="N3W-LG-wBU"/>
                         <outlet property="percentages" destination="YWt-aE-4tz" id="jPc-gm-WSg"/>
@@ -106,6 +122,41 @@
                 </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="672" y="154"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="Jud-Qo-fBO">
+            <objects>
+                <viewController id="lkr-3V-o9K" customClass="SettingsViewController" customModule="test" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7Av-Eh-AK1">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Select Default Percentage" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="nar-uJ-Wru">
+                                <frame key="frameInset" minX="16" minY="187" width="288" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" misplaced="YES" id="DVX-AW-ec1">
+                                <frame key="frameInset" minY="216" height="216"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="lkr-3V-o9K" id="7y3-D1-Lfl"/>
+                                    <outlet property="delegate" destination="lkr-3V-o9K" id="UxB-PJ-eL4"/>
+                                </connections>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Settings" id="owe-ck-zKJ"/>
+                    <connections>
+                        <outlet property="defaultPercentagePicker" destination="DVX-AW-ec1" id="HT1-jC-Nzp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YSK-BI-OrR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1245" y="154"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="7hO-vw-IdT">
