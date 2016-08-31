@@ -22,6 +22,9 @@ class ViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        
+        billInput.becomeFirstResponder()
+        
 
         let defaultTip = defaults.integer(forKey: "defaultTip")
         
