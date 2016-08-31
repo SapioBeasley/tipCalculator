@@ -1,5 +1,3 @@
-## Will be recoding. No way to change the name of view controllers?? 
-
 # CodePath Prework Submission
 
 ## By [Andreas Beasley](https://github.com/sapiobeasley)
@@ -11,11 +9,11 @@ In the settings, I have added the ability to select a default tip percentage
 that persists across sessions.
 
 **Optional stories completed:**
-<!-- - Styles -->
+- [x] Styles
 
 **Additional:**
-- Default tip percentage
+- [x] Default tip percentage
 
 ## Walkthrough
 
-![GIF walthrough of app](http://i.imgur.com/38xEnEo.gif)
+![GIF walthrough of app](http://i.imgur.com/AHKnMOx.gif)
