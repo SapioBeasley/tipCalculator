@@ -8,10 +8,10 @@ calculator displays tip amounts for the following percentages: 10%, 15%, 20%.
 In the settings, I have added the ability to select a default tip percentage
 that persists across sessions.
 
-**Optional stories completed:**
-- [x] Styles
-
-**Additional:**
+**Optional**
+- [x] Modified UI
+- [x] Auto pop keyboard
+- [x] App launch page
 - [x] Default tip percentage
 
 ## Walkthrough
